@@ -12,8 +12,7 @@
     "git-update": "git add .; git commit -m 'update'; git push"
   },
   "files": [
-    "index.js",
-    "template.js"
+    "index.js"
   ],
   "homepage": "https://github.com/RnbWd/file-indexer",
   "bugs": {
