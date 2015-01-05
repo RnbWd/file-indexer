@@ -40,7 +40,7 @@ gulp.task('index', function() {
               .pipe(conflict(file.path))
               .pipe(gulp.dest(file.path))
         }))
-        
+
   })
 })
 ```
@@ -51,7 +51,7 @@ gulp.task('index', function() {
 
 #### array|string
 
-A folder path (or an array of folder paths) where you'd like to generate index.js files.
+A folder path string (or an array of folder paths) where you'd like to generate index.js files.
 
 #### callback(error, files)
 
