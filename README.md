@@ -28,15 +28,6 @@ With folder stucture:
     - two.js
     - three.js
     - `index.js`
-  - src
-    - init.js
-    - save.js
-    - `index.js`
-    - components
-      - header.js
-      - footer.js
-      - `index.js`
-
 
 #### path/folder/index.js  
 
@@ -50,7 +41,16 @@ index['two'] = require('./two');
 index['three'] = require('./three');
 ```
 
-#### path/src/index.js  
+- src
+  - init.js
+  - save.js
+  - `index.js`
+  - components
+    - header.js
+    - footer.js
+    - `index.js`
+
+#### src/index.js  
 
 ```js
 var index = {};
@@ -62,7 +62,7 @@ index['save'] = require('./save');
 index['components'] = require('./components');
 ```
 
-#### path/src/components/index.js  
+#### src/components/index.js  
 
 ```js
 var index = {};
