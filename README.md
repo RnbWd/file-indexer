@@ -69,4 +69,24 @@ files = {
 
 ```
 
+With folder stucture:
+
+```
+-file1
+  -one.js
+  -two.js
+  -three.js
+```
+
+#### files.file1 <buf> 
+
+```js
+var index = {};
+
+module.exports = index;
+
+index['one'] = require('./one');
+index['two'] = require('./two');
+index['three'] = require('./three')
+```
 
