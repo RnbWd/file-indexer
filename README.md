@@ -45,10 +45,6 @@ index['three'] = require('./three');
   - init.js
   - save.js
   - `index.js`
-  - components
-    - header.js
-    - footer.js
-    - `index.js`
 
 #### src/index.js  
 
@@ -61,8 +57,12 @@ index['init'] = require('./init');
 index['save'] = require('./save');
 index['components'] = require('./components');
 ```
+- components
+  - header.js
+  - footer.js
+  - `index.js`
 
-#### src/components/index.js  
+#### components/index.js  
 
 ```js
 var index = {};
@@ -72,6 +72,8 @@ module.exports = index;
 index['header'] = require('./header');
 index['footer'] = require('./footer');
 ```
+
+Using gulp-ecosystem
 
 #### Gulp-Pattern (plugin in the works)
 
