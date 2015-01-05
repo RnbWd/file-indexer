@@ -29,16 +29,18 @@ var paths = ['./path/folder', './path/src'];
 
 gulp.task('index', function() {
   indexer(paths, function(err, files) {
+
     gulp.src(paths)
-      .pipe(tap(function(file) {
-        gulp.src(file.path, {read: false})
-          .pipe(tap(function(file) {
-            file.contents = files[file.relative]
-          }))
-          .pipe(rename('index.js'))
-          .pipe(conflict(file.path))
-          .pipe(gulp.dest(file.path))
-    }))
+        .pipe(tap(function(file) {
+          gulp.src(file.path, {read: false})
+              .pipe(tap(function(file) {
+                file.contents = files[file.relative]
+              }))
+              .pipe(rename('index.js'))
+              .pipe(conflict(file.path))
+              .pipe(gulp.dest(file.path))
+        }))
+        
   })
 })
 ```
