@@ -12,11 +12,34 @@ npm install --save-dev file-indexer
 
 ```js
 var indexer = require('file-indexer');
-indexer(['./path/folder', './path/src'], function(err, buf) {
-  fs.writeFileSync('./path/folder/index.js', buf['folder']);
-  fs.writeFileSync('./path/src/index.js', buf['src']);
+indexer(['./path/folder', './path/src'], function(err, fo;es) {
+  fs.writeFileSync('./path/folder/index.js', files.folder);
+  fs.writeFileSync('./path/src/index.js', files.src);
 })
 ```
+
+With folder stucture:
+
+```
+-folder
+  -one.js
+  -two.js
+  -three.js
+  -index.js
+```
+
+#### folder/index.js  
+
+```js
+var index = {};
+
+module.exports = index;
+
+index['one'] = require('./one');
+index['two'] = require('./two');
+index['three'] = require('./three');
+```
+
 
 #### Gulp-Pattern (plugin in the works)
 
@@ -69,24 +92,5 @@ files = {
 
 ```
 
-With folder stucture:
 
-```
--file1
-  -one.js
-  -two.js
-  -three.js
-```
-
-#### files.file1 <buf> 
-
-```js
-var index = {};
-
-module.exports = index;
-
-index['one'] = require('./one');
-index['two'] = require('./two');
-index['three'] = require('./three')
-```
 
