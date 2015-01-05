@@ -57,15 +57,15 @@ A folder path string (or an array of folder paths) where you'd like to generate 
 
 `files`: an **object of buffers** labeled by relative filename.
 
-if `indexer(['./file1', './path/file2'], cb(err, files)`
-
-then 
+if
 
 ```js
+indexer(['./file1', './path/file2'], cb(err, files);
+
 files = {
-   file1: <buf>,
-   file2: <buf>
-  }
+ file1: <buf>,
+ file2: <buf>
+}
 
 ```
 
