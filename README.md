@@ -21,7 +21,7 @@ indexer(['./path/folder', './path/src'], function(err, buf) {
 #### Gulp-Pattern (plugin in the works)
 
 ```js
-var tap = require('gulp-indexer');
+var tap = require('gulp-tap');
 var conflict = require('gulp-conflict')
 var rename = require('gulp-rename');
 
