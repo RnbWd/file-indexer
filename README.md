@@ -22,8 +22,8 @@ indexer(['./path/folder', './path/src', './path/src/components'], function(err, 
 With folder stucture:
 
 
-- path
-  - folder
+- path/
+  - folder/
     - one.js
     - two.js
     - three.js
@@ -41,9 +41,10 @@ index['two'] = require('./two');
 index['three'] = require('./three');
 ```
 
-- src
+- src/
   - init.js
   - save.js
+  - components/
   - `index.js`
 
 #### src/index.js  
@@ -57,7 +58,7 @@ index['init'] = require('./init');
 index['save'] = require('./save');
 index['components'] = require('./components');
 ```
-- components
+- components/
   - header.js
   - footer.js
   - `index.js`
