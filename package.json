@@ -1,6 +1,6 @@
 {
   "name": "file-indexer",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Create index.js file for folders",
   "repository": "RnbWd/file-indexer",
   "author": "RnbWd <dwisner6@gmail.com>",
