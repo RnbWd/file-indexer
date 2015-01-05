@@ -7,22 +7,24 @@ var fs = require('fs');
 
 describe('Sample', function() {
 
-  it('should return an array with single buffer', function(done) {
+  it('should return an object with sample buffer', function(done) {
     indexer('./sample', function(err, files) {
-      console.log()
-      if (err) throw err;
+      if (err) return done(err);
       assert.ok(_.isObject(files));
+      assert.equal(Object.keys(files).length, 1);
       assert.ok(files.sample);
       assert.ok(Buffer.isBuffer(files.sample));
       done();
     });
   });
 
-  it('should return this test-index.js', function(done) {
+  it('should return this test-index.js with 1 key', function(done) {
       fs.readFile('./sample/test-index.js', function(err, testfile) {
-        if (err) throw err;
+        if (err) return done(err);
         indexer(['./sample'], function(err, files) {
-          if (err) throw err;
+          if (err) return done(err);
+          assert.ok(_.isObject(files));
+          assert.equal(Object.keys(files).length, 1);
           assert.ok(files.sample);
           assert.equal(files.sample.length, testfile.length);
           assert.deepEqual(files.sample, testfile);
@@ -31,11 +33,12 @@ describe('Sample', function() {
     });
   });
 
-  it('should return the potato-index.js', function(done) {
+  it('should return the potato-index.js with 2 keys', function(done) {
       fs.readFile('./sample/potato/potato-index.js', function(err, testfile) {
-        if (err) throw err;
+        if (err) return done(err);
         indexer(['./sample/potato', './sample'], function(err, files) {
-          if (err) throw err;
+          if (err) return done(err);
+          assert.equal(Object.keys(files).length, 2);
           assert.ok(files.sample);
           assert.ok(files.potato);
           assert.equal(files.potato.length, testfile.length);
@@ -44,6 +47,18 @@ describe('Sample', function() {
       });
     });
   });
+
+  it('should error and return 0 files', function(done) {
+    indexer([123, './sample'], function(err, files) {
+      assert.deepEqual(err, new Error('Please use strings'));
+      assert.throws(function() {
+        throw err
+      }, Error);
+      assert.ok(_.isObject(files));
+      assert.equal(Object.keys(files).length, 0);
+      done();
+    }); 
+  })
 
 });
 

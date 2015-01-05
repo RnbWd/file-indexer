@@ -8,6 +8,7 @@ module.exports = function (files, cb) {
   var results = {};
   if (!_.isArray(files)) files = [files];
   each(files, function(item, index, done) {
+    if (typeof item !== 'string') return done(new Error('Please use strings'));
     indexer(item, function(err, file) {
       if (err) return done(err);
       results = _.assign(results, file);
