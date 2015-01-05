@@ -2,27 +2,29 @@
   "name": "file-indexer",
   "version": "0.0.1",
   "description": "Create index.js file for folders",
-  "repository": "RnbWd/gulp-indexer",
+  "repository": "RnbWd/file-indexer",
   "author": "RnbWd <dwisner6@gmail.com>",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "git-update": "git add .; git commit -m 'update'; git push"
   },
   "files": [
     "index.js",
     "template.js"
   ],
-  "homepage": "https://github.com/RnbWd/glob-indexer",
+  "homepage": "https://github.com/RnbWd/file-indexer",
   "bugs": {
-    "url": "https://github.com/RnbWd/glob-indexer/issues"
+    "url": "https://github.com/RnbWd/file-indexer/issues"
   },
   "keywords": [
     "index",
     "files",
     "glob",
-    "globbing",
+    "gulp",
+    "folder",
     "index.js"
   ],
   "license": "MIT",
