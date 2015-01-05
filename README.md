@@ -12,7 +12,7 @@ npm install --save-dev file-indexer
 
 ```js
 var indexer = require('file-indexer');
-indexer(['./path/folder', './path/src', './path/src/components'], function(err, fo;es) {
+indexer(['./path/folder', './path/src', './path/src/components'], function(err, files) {
   fs.writeFileSync('./path/folder/index.js', files.folder);
   fs.writeFileSync('./path/src/index.js', files.src);
   fs.writeFileSync('./path/src/components/index.js', files.components);
