@@ -6,6 +6,33 @@ Create index.js file for folders
 ```bash
 npm install --save-dev file-indexer
 ```
+## Why
+
+Reduces boilerplate for nested file structures.
+
+#### before
+
+```js
+var one = require('./path/one');
+var two = require('./path/two');
+var three = require('./path/three');
+```
+
+#### after
+
+**es6** 
+
+```js
+import {one, two, three} from './path';
+```
+
+**js**
+```js
+var path = require('./path');
+var one = path.one, two = path.two, three = path.three;
+```
+
+####es6
 
 
 ## How to Use
