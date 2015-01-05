@@ -24,18 +24,18 @@ With folder stucture:
 
 - path
   - folder
-    one.js
-    two.js
-    three.js
-    index.js
+    - one.js
+    - two.js
+    - three.js
+    - `index.js`
   - src
-    init.js
-    save.js
-    index.js
+    - init.js
+    - save.js
+    - `index.js`
     - components
-      header.js
-      footer.js
-      index.js
+      - header.js
+      - footer.js
+      - `index.js`
 
 
 #### path/folder/index.js  
