@@ -21,23 +21,22 @@ indexer(['./path/folder', './path/src', './path/src/components'], function(err, 
 
 With folder stucture:
 
-```
--path
-  -folder
+
+- path
+  - folder
     one.js
     two.js
     three.js
     index.js
-  -src
+  - src
     init.js
     save.js
     index.js
-    -components
+    - components
       header.js
       footer.js
       index.js
 
-```
 
 #### path/folder/index.js  
 
