@@ -21,7 +21,8 @@ indexer(['./path/folder', './path/src'], function(err, fo;es) {
 With folder stucture:
 
 ```
--folder
+-path
+ -folder
   -one.js
   -two.js
   -three.js
