@@ -1,6 +1,8 @@
 file-indexer
 ============
 
+[![Join the chat at https://gitter.im/RnbWd/file-indexer](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/RnbWd/file-indexer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Create index.js file for folders
 
 ```bash
