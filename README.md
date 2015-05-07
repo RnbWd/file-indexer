@@ -1,7 +1,10 @@
-file-indexer
+file-indexer [![Build Status](https://img.shields.io/travis/RnbWd/file-indexer.svg?style=flat-square)](https://travis-ci.org/RnbWd/file-indexer)
+[![Dependency Status](https://img.shields.io/david/RnbWd/file-indexer.svg?style=flat-square)](https://david-dm.org/RnbWd/file-indexer)
 ============
 
-Create index.js file for folders
+> Create index.js file for folders
+
+[![NPM](https://nodei.co/npm/file-indexer.png?downloads=true)](https://nodei.co/npm/file-indexer/)
 
 ```bash
 npm install --save-dev file-indexer
@@ -20,7 +23,7 @@ var three = require('./path/three');
 
 #### after
 
-**es6** 
+**es6**
 
 ```js
 import {one, two, three} from './path';
@@ -56,7 +59,7 @@ With folder stucture:
     - three.js
     - `index.js`
 
-#### path/folder/index.js  
+#### path/folder/index.js
 
 ```js
 var index = {};
@@ -74,7 +77,7 @@ index['three'] = require('./three');
   - components/
   - `index.js`
 
-#### src/index.js  
+#### src/index.js
 
 ```js
 var index = {};
@@ -90,7 +93,7 @@ index['components'] = require('./components');
   - footer.js
   - `index.js`
 
-#### components/index.js  
+#### components/index.js
 
 ```js
 var index = {};
