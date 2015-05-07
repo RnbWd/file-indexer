@@ -35,6 +35,29 @@ var one = path.one, two = path.two, three = path.three;
 
 ####es6
 
+## API
+
+### indexer(array|string, callback)
+
+#### array|string
+
+A folder path string (or an array of folder paths) where you'd like to generate index.js files.
+
+#### callback(error, files)
+
+`files`: an **object of buffers** labeled by relative filename.
+
+if  `indexer(['./file1', './path/file2'], cb(<err>, <files>))`
+
+
+```js
+
+files = {
+ file1: <buf>,
+ file2: <buf>
+}
+
+```
 
 ## How to Use
 
@@ -131,31 +154,4 @@ gulp.task('index', function() {
 })
 ```
 
-## API
-
-### indexer(array|string, callback)
-
-#### array|string
-
-A folder path string (or an array of folder paths) where you'd like to generate index.js files.
-
-#### callback(error, files)
-
-`files`: an **object of buffers** labeled by relative filename.
-
-if  `indexer(['./file1', './path/file2'], cb(<err>, <files>))`
-
-
-```js
-
-files = {
- file1: <buf>,
- file2: <buf>
-}
-
-```
-
 **MIT**
-
-
-
