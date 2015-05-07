@@ -1,7 +1,7 @@
 {
   "name": "file-indexer",
   "description": "Create index.js file for folders",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "David Wisner <dwisner6@gmail.com>",
   "bugs": {
     "url": "https://github.com/RnbWd/file-indexer/issues"
