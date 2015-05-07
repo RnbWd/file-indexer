@@ -11,9 +11,9 @@
     "globby": "^2.0.0",
     "lodash": "^3.8.0"
   },
-  "files": [
-    "index.js"
-  ],
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  },
   "homepage": "https://github.com/RnbWd/file-indexer",
   "keywords": [
     "files",
@@ -24,11 +24,9 @@
     "index.js"
   ],
   "license": "MIT",
+  "main": "index.js",
   "repository": "RnbWd/file-indexer",
   "scripts": {
     "test": "mocha"
-  },
-  "devDependencies": {
-    "mocha": "^2.2.4"
   }
 }
