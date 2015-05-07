@@ -1,5 +1,4 @@
-file-indexer [![Build Status](https://img.shields.io/travis/RnbWd/file-indexer.svg?style=flat-square)](https://travis-ci.org/RnbWd/file-indexer)[![Dependency Status](https://img.shields.io/david/RnbWd/file-indexer.svg?style=flat-square)](https://david-dm.org/RnbWd/file-indexer)
-============
+# file-indexer [![Build Status](https://img.shields.io/travis/RnbWd/file-indexer.svg?style=flat-square)](https://travis-ci.org/RnbWd/file-indexer)[![Dependency Status](https://img.shields.io/david/RnbWd/file-indexer.svg?style=flat-square)](https://david-dm.org/RnbWd/file-indexer)
 
 > Create index.js file for folders
 
