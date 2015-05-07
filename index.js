@@ -31,9 +31,10 @@ function indexer(glob, cb) {
       return p.substr(lg+1).split('.');
     });
     // see template.js
-    var indexed = "var index = {};\n\nmodule.exports = index;\n<% paths.forEach(function(p) { if (p[0] !== 'index' && p[0].split('/').length === 1) { %>\nindex['<%= p[0] %>'] = require('./<%= p[0] %>'); <% }}) %>";
-    var file = _.template(indexed, {paths: paths});
-    var buffer = new Buffer(file);
+    var indexed = "var index = {};\n\nmodule.exports = index;\n<% paths.forEach(function(p) { if (p[0] !== 'index' && p[0].split('/').length === 1) { %>\nindex['<%= p[0] %>'] = require('./<%= p[0] %>');<% }}) %>\n";
+    var template = _.template(indexed);
+    var file = template({paths: paths});
+    var buffer = new Buffer(file, 'utf8');
     obj[name] = buffer;
     cb(null, obj);
   });

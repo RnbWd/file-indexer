@@ -1,35 +1,34 @@
 {
   "name": "file-indexer",
-  "version": "0.1.6",
   "description": "Create index.js file for folders",
-  "repository": "RnbWd/file-indexer",
+  "version": "0.1.6",
   "author": "David Wisner <dwisner6@gmail.com>",
-  "engines": {
-    "node": ">=0.10.0"
+  "bugs": {
+    "url": "https://github.com/RnbWd/file-indexer/issues"
   },
-  "scripts": {
-    "test": "mocha",
-    "git-update": "git add .; git commit -m 'update'; git push"
+  "dependencies": {
+    "each-async": "~1.1.1",
+    "globby": "^2.0.0",
+    "lodash": "^3.8.0"
   },
   "files": [
     "index.js"
   ],
   "homepage": "https://github.com/RnbWd/file-indexer",
-  "bugs": {
-    "url": "https://github.com/RnbWd/file-indexer/issues"
-  },
   "keywords": [
-    "index",
     "files",
+    "folder",
     "glob",
     "gulp",
-    "folder",
+    "index",
     "index.js"
   ],
   "license": "MIT",
-  "dependencies": {
-    "each-async": "~1.1.1",
-    "globby": "~1.1.0",
-    "lodash": "~2.4.1"
+  "repository": "RnbWd/file-indexer",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
   }
 }

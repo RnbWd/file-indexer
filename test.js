@@ -4,6 +4,7 @@ var indexer = require('./');
 var assert = require('assert');
 var _ =  require('lodash');
 var fs = require('fs');
+var path = require('path');
 
 describe('Sample', function() {
 
@@ -19,32 +20,28 @@ describe('Sample', function() {
   });
 
   it('should return this test-index.js with 1 key', function(done) {
-      fs.readFile('./sample/test-index.js', function(err, testfile) {
-        if (err) return done(err);
-        indexer(['./sample'], function(err, files) {
-          if (err) return done(err);
-          assert.ok(_.isObject(files));
-          assert.equal(Object.keys(files).length, 1);
-          assert.ok(files.sample);
-          assert.equal(files.sample.length, testfile.length);
-          assert.deepEqual(files.sample, testfile);
-          done();
-      });
+    var testfile = fs.readFileSync(path.join(__dirname, './sample/test-index.js'));
+    indexer(['./sample'], function (err, files) {
+      if (err) return done(err);
+      assert.ok(_.isObject(files));
+      assert.equal(Object.keys(files).length, 1);
+      assert.ok(files.sample);
+      assert.equal(files.sample.length, testfile.length);
+      assert.deepEqual(files.sample, testfile);
+      done();
     });
   });
 
   it('should return the potato-index.js with 2 keys', function(done) {
-      fs.readFile('./sample/potato/potato-index.js', function(err, testfile) {
-        if (err) return done(err);
-        indexer(['./sample/potato', './sample'], function(err, files) {
-          if (err) return done(err);
-          assert.equal(Object.keys(files).length, 2);
-          assert.ok(files.sample);
-          assert.ok(files.potato);
-          assert.equal(files.potato.length, testfile.length);
-          assert.deepEqual(files.potato, testfile);
-          done();
-      });
+    var testfile = fs.readFileSync(path.join(__dirname, './sample/potato/potato-index.js'));
+    indexer(['./sample/potato', './sample'], function(err, files) {
+      if (err) return done(err);
+      assert.equal(Object.keys(files).length, 2);
+      assert.ok(files.sample);
+      assert.ok(files.potato);
+      assert.equal(files.potato.length, testfile.length);
+      assert.deepEqual(files.potato, testfile);
+      done();
     });
   });
 
@@ -57,8 +54,7 @@ describe('Sample', function() {
       assert.ok(_.isObject(files));
       assert.equal(Object.keys(files).length, 0);
       done();
-    }); 
+    });
   })
 
 });
-
